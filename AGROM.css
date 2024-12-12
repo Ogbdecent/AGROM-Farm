@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #fff;
+    font:'san-serif';
+    min-height: 100vh;
+}
+:root {
+    --color-primary: rgb(44, 95, 44);
+    --color-white: #fff;
+    --color-black: #000;
+}
+
+header {
+    background: url('image/AgromBackgroundImage.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem 30rem 0;
+    /* Top Right Bottom Left*/
+}
+header h1 {
+    background-image: url('image/icon.svg');
+    background-position: top right 12px ;
+    background-repeat: no-repeat;
+    /* background */
+    padding-top: 1.5rem;
+    /* NOTE: changing the properties of an identifier by Displaying an identifier gives it the properties and features of that mode "As shown below"*/
+    display: inline;
+}
+header ul {
+    display: flex;
+    padding-top: 2rem;
+}
+header li {
+    list-style-type: none;
+    padding-right: 1.5rem;
+}
+header a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+header a:hover{
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+}
+
+section {
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    font-family: Arial;
+}
+
+section h1 {
+    font-size: 3rem;
+}
+section span {
+    font-size: 3.3rem;
+}
+section p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    word-spacing: normal;
+}
+
+main {
+    padding: 4rem 8rem;
+    color: #000;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3);
+    align-items: end;
+    gap: 1rem;
+}
+
+.content1 {
+    grid-row: 1;
+}
+.content1 h1 {
+    color: var(--color-primary);
+    font-size: 9px;
+}
+.content2 {
+    background-image: url('image/icon-park-solid--pure-natural.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+
+    background-size: 7rem;
+    padding-top: 8rem;
+    grid-column: 2;
+}
+.content3 {
+    background-image: url('image/icon-park-solid--cattle.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+
+    background-size: 7rem;
+    padding-top: 8rem;
+    grid-column: 3;
+}
+.content4 {
+    align-self: self-start;
+    padding-top: 1rem;
+}
+.content4 button {
+    width: 10rem;
+    height: 2rem;
+      background-color: #fff;
+    border: 2px orange solid;
+}
+.content4 a {
+    text-decoration: none;
+    color:orange;
+    display: block;
+}
+.content4 a:hover {
+    color: #fff;
+}
+.content4 button:hover {
+    color: #fff;
+    border: none;
+    background-color: var(--color-primary);
+    transform: skew(-10deg);
+    transition: all 0.4s 0.1s ;
+}
+.content5 {
+padding-top: 8rem;
+background-image: url('image/lucide--wheat.svg');
+background-size: 7rem;
+background-repeat: no-repeat;
+z-index: 999;
+}
+.content6 {
+grid-column: 3;
+padding-top: 8rem;
+background-image: url('image/ph--tractor-fill.svg');
+background-size: 7rem;
+background-repeat: no-repeat;
+}
+
+footer {
+    padding: 5rem;
+    color: #000;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: end;
+    gap: 1rem;
+    background-color: #f0fff6;
+}
+
+@media screen and (max-width:567px) {
+    nav {
+    padding-top: 1.5rem;
+    } 
+    section {
+        position: absolute;
+        top: 25%;
+        left: 15%;        
+        font-family: Arial;
+    }
+    section h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+header {
+    display: block;
+}
+header h1 {
+    margin-top: 7rem;
+}
+    main, footer {
+        display: block;
+    }
+    header ul {
+        display: flex;
+        padding-top: 0;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    nav {
+        padding-top: 1.5rem;
+        justify-content: center;
+    } 
+    section {
+        position: absolute;
+        top: 25%;
+        left: 8%;        
+        font-family: Arial;
+    }
+    header {
+        display: block;
+    }
+        main, footer {
+            display: block;
+        }
+        
+    main, footer {
+        display: block;
+    }
+    section {
+        text-align: left;
+    }
+    header ul {
+        display: flex;
+        padding-top: 0;
+    }
+}
