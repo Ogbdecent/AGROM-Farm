@@ -70,22 +70,41 @@ section p {
 }
 
 main {
-    padding: 4rem 8rem;
+    padding: 2rem  8rem 14rem 8rem;
     color: #000;
     font-size: 16px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3);
-    align-items: end;
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-auto-columns: minmax(1, 3);
     gap: 1rem;
 }
 
 .content1 {
-    grid-row: 1;
+    grid-row: 1/3;
+    grid-column: 1/1;
+    height: 2rem;
+}
+[class='par'] {
+    padding-top: 1rem;
 }
 .content1 h1 {
     color: var(--color-primary);
     font-size: 9px;
+}
+.content1 a {
+    text-decoration: none;
+    color:orange;
+    display: block;
+}
+.content1 a:hover {
+    color: #fff;
+}
+.content1 button:hover {
+    color: #fff;
+    border: none;
+    background-color: var(--color-primary);
+    transform: skew(-10deg);
+    transition: all 0.4s 0.1s ;
 }
 .content2 {
     background-image: url('image/icon-park-solid--pure-natural.svg');
@@ -94,7 +113,6 @@ main {
 
     background-size: 7rem;
     padding-top: 8rem;
-    grid-column: 2;
 }
 .content3 {
     background-image: url('image/icon-park-solid--cattle.svg');
@@ -103,41 +121,20 @@ main {
 
     background-size: 7rem;
     padding-top: 8rem;
-    grid-column: 3;
+    align-self: top;
 }
 .content4 {
-    align-self: self-start;
-    padding-top: 1rem;
+    align-self: center;
 }
-.content4 button {
-    width: 10rem;
-    height: 2rem;
-      background-color: #fff;
-    border: 2px orange solid;
-}
-.content4 a {
-    text-decoration: none;
-    color:orange;
-    display: block;
-}
-.content4 a:hover {
-    color: #fff;
-}
-.content4 button:hover {
-    color: #fff;
-    border: none;
-    background-color: var(--color-primary);
-    transform: skew(-10deg);
-    transition: all 0.4s 0.1s ;
-}
-.content5 {
+
+.content4 {
 padding-top: 8rem;
 background-image: url('image/lucide--wheat.svg');
 background-size: 7rem;
 background-repeat: no-repeat;
 z-index: 999;
 }
-.content6 {
+.content5 {
 grid-column: 3;
 padding-top: 8rem;
 background-image: url('image/ph--tractor-fill.svg');
@@ -179,6 +176,9 @@ header h1 {
     main, footer {
         display: block;
     }
+.content1 {
+    padding-bottom: 26rem;
+}
     header ul {
         display: flex;
         padding-top: 0;
@@ -186,32 +186,6 @@ header h1 {
 
 }
 
-@media screen and (max-width:768px) {
-    nav {
-        padding-top: 1.5rem;
-        justify-content: center;
-    } 
-    section {
-        position: absolute;
-        top: 25%;
-        left: 8%;        
-        font-family: Arial;
-    }
-    header {
-        display: block;
-    }
-        main, footer {
-            display: block;
-        }
-        
-    main, footer {
-        display: block;
-    }
-    section {
-        text-align: left;
-    }
-    header ul {
-        display: flex;
-        padding-top: 0;
-    }
-}
+ @media screen and (max-width:768px) {
+   
+} 
