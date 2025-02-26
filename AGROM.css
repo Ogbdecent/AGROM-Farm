@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     color: #fff;
-    font:'san-serif';
+    font: 'san-serif';
     min-height: 100vh;
 }
+
 :root {
     --color-primary: rgb(44, 95, 44);
     --color-white: #fff;
@@ -23,28 +25,33 @@ header {
     padding: 1rem 1.5rem 30rem 0;
     /* Top Right Bottom Left*/
 }
+
 header h1 {
     background-image: url('image/icon.svg');
-    background-position: top right 12px ;
+    background-position: top right 12px;
     background-repeat: no-repeat;
     /* background */
     padding-top: 1.5rem;
     /* NOTE: changing the properties of an identifier by Displaying an identifier gives it the properties and features of that mode "As shown below"*/
     display: inline;
 }
+
 header ul {
     display: flex;
     padding-top: 2rem;
 }
+
 header li {
     list-style-type: none;
     padding-right: 1.5rem;
 }
+
 header a {
     text-decoration: none;
     color: var(--color-white);
 }
-header a:hover{
+
+header a:hover {
     color: var(--color-primary);
     cursor: pointer;
     transition: all ease-in-out 0.4s;
@@ -60,9 +67,11 @@ section {
 section h1 {
     font-size: 3rem;
 }
+
 section span {
     font-size: 3.3rem;
 }
+
 section p {
     font-size: 1rem;
     line-height: 1.4rem;
@@ -70,7 +79,7 @@ section p {
 }
 
 main {
-    padding: 2rem  8rem 14rem 8rem;
+    padding: 2rem 8rem 14rem 8rem;
     color: #000;
     font-size: 16px;
     display: grid;
@@ -84,28 +93,34 @@ main {
     grid-column: 1/1;
     height: 2rem;
 }
+
 [class='par'] {
     padding-top: 1rem;
 }
+
 .content1 h1 {
     color: var(--color-primary);
     font-size: 9px;
 }
+
 .content1 a {
     text-decoration: none;
-    color:orange;
+    color: orange;
     display: block;
 }
+
 .content1 a:hover {
     color: #fff;
 }
+
 .content1 button:hover {
     color: #fff;
     border: none;
     background-color: var(--color-primary);
     transform: skew(-10deg);
-    transition: all 0.4s 0.1s ;
+    transition: all 0.4s 0.1s;
 }
+
 .content2 {
     background-image: url('image/icon-park-solid--pure-natural.svg');
     background-repeat: no-repeat;
@@ -114,6 +129,7 @@ main {
     background-size: 7rem;
     padding-top: 8rem;
 }
+
 .content3 {
     background-image: url('image/icon-park-solid--cattle.svg');
     background-repeat: no-repeat;
@@ -123,23 +139,25 @@ main {
     padding-top: 8rem;
     align-self: top;
 }
+
 .content4 {
     align-self: center;
 }
 
 .content4 {
-padding-top: 8rem;
-background-image: url('image/lucide--wheat.svg');
-background-size: 7rem;
-background-repeat: no-repeat;
-z-index: 999;
+    padding-top: 8rem;
+    background-image: url('image/lucide--wheat.svg');
+    background-size: 7rem;
+    background-repeat: no-repeat;
+    z-index: 999;
 }
+
 .content5 {
-grid-column: 3;
-padding-top: 8rem;
-background-image: url('image/ph--tractor-fill.svg');
-background-size: 7rem;
-background-repeat: no-repeat;
+    grid-column: 3;
+    padding-top: 8rem;
+    background-image: url('image/ph--tractor-fill.svg');
+    background-size: 7rem;
+    background-repeat: no-repeat;
 }
 
 footer {
@@ -147,7 +165,7 @@ footer {
     color: #000;
     font-size: 16px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: end;
     gap: 1rem;
     background-color: #f0fff6;
@@ -155,30 +173,38 @@ footer {
 
 @media screen and (max-width:567px) {
     nav {
-    padding-top: 1.5rem;
-    } 
+        padding-top: 1.5rem;
+    }
+
     section {
         position: absolute;
         top: 25%;
-        left: 15%;        
+        left: 15%;
         font-family: Arial;
     }
+
     section h1 {
         font-size: 3rem;
         text-align: center;
     }
-header {
-    display: block;
-}
-header h1 {
-    margin-top: 7rem;
-}
-    main, footer {
+
+    header {
         display: block;
     }
-.content1 {
-    padding-bottom: 26rem;
-}
+
+    header h1 {
+        margin-top: 7rem;
+    }
+
+    main,
+    footer {
+        display: block;
+    }
+
+    .content1 {
+        padding-bottom: 26rem;
+    }
+
     header ul {
         display: flex;
         padding-top: 0;
@@ -186,6 +212,4 @@ header h1 {
 
 }
 
- @media screen and (max-width:768px) {
-   
-} 
+@media screen and (max-width:768px) {}
